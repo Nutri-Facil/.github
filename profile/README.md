@@ -71,3 +71,13 @@ Este projeto foi desenvolvido por:
 - @WesleyFilemon
 ```
 
+## 2. Casos de Teste (exemplo)
+      
+      | ID   | Funcionalidade                   | Pré-Condição                        | Passos                                                   | Dados de Entrada                          | Resultado Esperado                                                                 | Resultado Obtido                            | Status (✅/❌) | Observações                         |
+      | ---- | -------------------------------- | ----------------------------------- | -------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------- | ------------- | ------------------------------------ |
+      | FT-01 | Seleção de Dieta Mediterrânea                | Usuário autenticado e página de “Seleção de Dieta” aberta                | 1. Acessar a tela de seleção de dieta  2. Selecionar a opção **“Mediterrânea”**  3. Preencher o campo **Peso** com `70` kg  4. Preencher o campo **Altura** com `170` cm  5. Preencher o campo **Idade** com `30` anos  6. Selecionar **Sexo** como `Feminino`  7. Selecionar o objetivo "Emagrecimento"**  8. Selecionar uma restrição alimentar "Nenhuma"     9. Clicar no botão “Continuar Para Preferências Alimentares”   10. Selecionar preferências alimentar     11. Clicar no botão "Ver Meu Plano Alimentar"           |      - Dieta: `Mediterrânea`  - Peso: `70`  - Altura: `170`  - Idade: `30`  - Sexo: `Feminino`     |  O sistema exibe um plano alimentar contendo refeições ricas em azeite de oliva, peixes e grãos integrais.      |       Taxa metabólica basal: 1451kcal/dia
+IMC: 24 Peso Normal
+Água: 2450ml/dia
+Objetivo: Emagrecer
+Plano alimentar: Saúde cardiovascular e
+manutenção de peso        |              ✅                      |
