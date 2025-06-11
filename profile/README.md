@@ -87,3 +87,20 @@ IMC: 24 Peso Normal
 Objetivo: Emagrecer
 Plano alimentar: Saúde cardiovascular e
 manutenção de peso        |              ✅                      |
+
+
+## 🐞 Registro de Bugs
+```markdown
+| ID do Bug | Caso de Teste Relacionado | Descrição do Problema                                                                                               | Severidade | Status    | Responsável     |
+| --------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------- | ---------- | --------- | --------------- |
+| BUG-01    | FT-08                     | Alimentos contendo lactose podiam ser escolhidos mesmo ao selecionar "Lactose" como restrição alimentar             | Alta       | Resolvido | Pedro Rodrigues |
+| BUG-02    | FT-08                     | Ovos podiam ser escolhidos como preferência alimentar mesmo ao selecionar “Ovos e Lactose” como restrição alimentar | Alta       | Resolvido | Pedro Rodrigues |
+| BUG-03    | FT-07                     | Era possível selecionar “Selecione seu objetivo” como opção ao invés de “Hipertrofia” ou “Emagrecimento”            | Alta       | Resolvido | Marco Thulio    |
+| BUG-04    | FT-07                     | Era possível selecionar “Selecione” como sexo ao invés de “Masculino” ou “Feminino”                                 | Alta       | Resolvido | Marco Thulio    |
+| BUG-05    | FT-03                     | IMC mostra “peso normal” mesmo com valores de peso e altura incompatíveis                                           | Alta       | Resolvido | Marco Thulio    |
+| BUG-06    | FT-02                     | TMB calculada incorretamente para valores extremos                                                                  | Alta       | Resolvido | Marco Thulio    |
+| BUG-07    | FT-07                     | Campo de entrada de altura aceita valores negativos                                                                 | Média      | Resolvido | Pedro Rodrigues |
+| BUG-08    | FT-08                     | Preferência de alimentos não é salva corretamente entre sessões                                                     | Baixa      | Resolvido | Pedro Rodrigues |
+| BUG-09    | FT-03                     | Ao selecionar dieta Cetogênica, ainda são sugeridos alimentos ricos em carboidratos                                 | Alta       | Resolvido | Marco Thulio    |
+| BUG-10    | FT-04                     | Consumo de água não é recalculado após alteração de peso                                                            | Média      | Resolvido | Marco Thulio    |
+```
