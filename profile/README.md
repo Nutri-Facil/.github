@@ -31,18 +31,11 @@
 - Jest (para testes unitários)
 ```
 
-## 💻 Instalação e Execução
+## 💻 Execução
 
 ```markdown
-1. Clone o repositório:
-   git clone https://github.com/seu-usuario/nutri-facil.git
-   cd nutri-facil
-
-2. Abra o arquivo index.html em qualquer navegador moderno.
-
-3. Para rodar os testes com Jest:
-   npm install
-   npm test
+Sistema hospedado em:
+https://prod01.github.io/prod01-teste_nutri/index.html
 ```
 
 ## ✅ Uso do Projeto
