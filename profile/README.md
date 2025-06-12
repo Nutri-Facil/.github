@@ -58,20 +58,7 @@ Ao acessar o Nutri-Fácil, o usuário pode:
 6. Obter recomendações seguras e personalizadas com base em seu perfil.
 ```
 
-## 🙌 Créditos
-
-```markdown
-Este projeto foi desenvolvido por:
-
-- @BJesuss
-- @guivpn
-- @Leonardogabriels
-- @MarcoThulio1207
-- @prod01
-- @WesleyFilemon
-```
-
-## 2. Casos de Teste (exemplo)
+## ⚠️ Casos de Teste
       
 | ID   | Funcionalidade                   | Pré-Condição                        | Passos                                                   | Dados de Entrada                          | Resultado Esperado                                                                 | Resultado Obtido                            | Status (✅/❌) | Observações                         |
 | ---- | -------------------------------- | ----------------------------------- | -------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------- | ------------- | ------------------------------------ |
@@ -87,13 +74,6 @@ Este projeto foi desenvolvido por:
 | FT-10  | Seleção de Dieta Vegetariana para Hipertrofia | Usuário autenticado, Seleção de Dieta, Página de "Dados Pessoais" aberta | 1. Acessar a tela de seleção de dieta 2. Selecionar a opção “Vegetariana” 3. Preencher o campo Peso com 76kg 4. Preencher o campo Altura com 178 cm 5. Preencher o campo Idade com 41 anos 6. Selecionar Sexo como Masculino 7. Selecionar o objetivo "Hipertrofia" 8. Selecionar uma restrição alimentar "Nenhuma" 9. Clicar no botão “Continuar Para Preferências Alimentares” 10. Selecionar preferências alimentar 11. Clicar no botão "Ver Meu Plano Alimentar" | - Dieta: `Vegetariana` - Peso: `76` - Altura: `178` - Idade: `41` - Sexo: `Masculino` | O sistema exibe um plano alimentar contendo refeições ricas nas preferências solicitadas, excluindo automaticamente itens que não fazem parte da dieta vegetariana. | Taxa metabólica basal: 1672kcal/dia IMC: 23 Sobrepeso Água: 2660ml/dia Objetivo: Hipertrofia Plano alimentar: Alimentação plant-based com proteínas completas | ✅     | Inclui ovos e laticínios que podem ser retirados pelo usuário |   
 ---
 
-IMC: 24 Peso Normal
-Água: 2450ml/dia
-Objetivo: Emagrecer
-Plano alimentar: Saúde cardiovascular e
-manutenção de peso        |              ✅                      |
-
-
 ## 🐞 Registro de Bugs
 ```markdown
 | ID do Bug | Caso de Teste Relacionado | Descrição do Problema                                                                                               | Severidade | Status    | Responsável     |
@@ -108,4 +88,97 @@ manutenção de peso        |              ✅                      |
 | BUG-08    | FT-08                     | Preferência de alimentos não é salva corretamente entre sessões                                                     | Baixa      | Resolvido | Pedro Rodrigues |
 | BUG-09    | FT-03                     | Ao selecionar dieta Cetogênica, ainda são sugeridos alimentos ricos em carboidratos                                 | Alta       | Resolvido | Marco Thulio    |
 | BUG-10    | FT-04                     | Consumo de água não é recalculado após alteração de peso                                                            | Média      | Resolvido | Marco Thulio    |
+```
+
+## 🧪 Teste de Usabilidade
+
+### 1. Dados dos Participantes
+
+| Nome / Código | Perfil     | Data       | Moderador     | Navegador |
+|---------------|------------|------------|---------------|-----------|
+| Júlio         | Iniciante  | 02/06/2025 | Pedro         | Chrome    |
+| Laura         | Iniciante  | 06/06/2025 | Breno         | Edge      |
+| Thiago        | Avançado   | 09/06/2025 | Wesley        | Brave     |
+| Antonio       | Iniciante  | 09/06/2025 | Guilherme     | Chrome    |
+| Fernanda      | Avançado   | 08/06/2025 | Marco Thulio  | Firefox   |
+| Ana Clara     | Avançado   | 08/06/2025 | Leonardo      | Chrome    |
+
+---
+
+### 2. Objetivos do Teste
+
+- Avaliar a facilidade de configuração do plano alimentar completo.
+- Verificar se os usuários compreendem seu estado nutricional (abaixo, ideal, obeso).
+- Testar se o sistema detecta automaticamente alimentos incompatíveis com restrições.
+- Avaliar a facilidade de customização de preferências alimentares.
+- Verificar a eficácia da validação de dados em tempo real.
+
+---
+
+### 3. Tarefas
+
+| Nº | Descrição da Tarefa                                                                 | Tempo Alvo | Tempo Real (s) | Sucesso (S/N) | Erros / Dificuldades                                           | Observações dos Usuários                         |
+|----|----------------------------------------------------------------------------------------|------------|----------------|----------------|----------------------------------------------------------------|--------------------------------------------------|
+| 1  | Configurar completamente seu plano alimentar                                           | 180 s      | 165            | S              | Confusão leve ao selecionar preferências                       | "Ficou tudo mais claro quando vi as categorias." |
+| 2  | Identificar os parâmetros recomendados ao final da configuração do plano alimentar     | 30 s       | 20             | S              | Nenhum                                                         | "Gostei do resultado do IMC, bem explicado."     |
+| 3  | Marcar restrição alimentar e depois selecionar ingrediente que faça parte da restrição | 30 s       | 33             | S              | Usuário marcou lactose, escolheu leite e recebeu alerta        | "Muito bom, já me avisou direto."                |
+| 4  | Selecionar suas preferências alimentares                                               | 45 s       | 40             | S              | Nenhum                                                         | "Só cliquei e ele já marcou, super fácil."       |
+| 5  | Inserir dados pessoais com valores errados                                             | 60 s       | 68             | N              | Digitou "-1" no campo 'idade' e não houve alerta imediato      | "Só apareceu o erro quando tentei continuar."     |
+
+---
+
+### 4. Métricas de Satisfação
+
+| Critério                          | Nota (1–5) | Comentários                               |
+|----------------------------------|------------|-------------------------------------------|
+| Facilidade de navegação          |      5     | "Fácil de entender"                       |
+| Clareza das instruções           |      4     | "Campos intuitivos"                       |
+| Velocidade de resposta           |      5     | "Muito rápido"                            |
+| Layout e design                  |      4     | "Cores bonitas"                           |
+| Confiança ao usar a ferramenta   |      5     | "Simples o site"                          |
+
+---
+
+### 5. Feedback Aberto
+
+**O que foi mais elogiado?**
+- "A simplicidade facilitou nas decisões e preenchimento."
+- "O site tem visual agradável e organizado."
+
+**O que acharam mais difícil?**
+- "Entender quais campos eram obrigatórios"
+
+**Sugestões de melhoria:**
+- "Colocar explicações para cada campo de entrada e o porquê dos dados serem pedidos."
+- "Adicionar botão de ajuda próximo aos campos."
+
+---
+
+### 6. Conclusões do Moderador
+
+**Principais bloqueios encontrados:**
+- Entendimento das métricas de TMB, IMC e consumo de água ideal.
+- Alguns usuários colocaram dados invalidos ou não preencheram.
+
+**Pontos fortes observados:**
+- Interface clara e direta na maioria das etapas.
+- Tempo de resposta do sistema dentro do esperado.
+
+**Recomendações para próxima iteração:**
+- Permitir passar pro próximo campo apenas ao preencher o anterior.
+- Inserir explicações rápidas nos campos de entrada.
+- Inserir explicações do porquê pedimos os dados e das siglas utilizadas.
+
+
+## 🙌 Créditos
+
+```markdown
+Este projeto foi desenvolvido por:
+
+- @BJesuss
+- @guivpn
+- @Leonardogabriels
+- @MarcoThulio1207
+- @prod01
+- @WesleyFilemon
 ```
